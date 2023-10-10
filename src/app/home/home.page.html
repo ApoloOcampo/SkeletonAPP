@@ -1,20 +1,98 @@
-<ion-header [translucent]="true">
+<!-- INICIO HEADER -->
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>SkeletonAPP</ion-title>
   </ion-toolbar>
 </ion-header>
+<!-- FIN HEADER -->
 
+<!-- INICIO CONTENIDO -->
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<!-- INICIO CARD -->
+  <ion-card id="formulario">
+    <ion-row class="ion-justify-content-center">
+      <ion-card-header>
+
+<!-- TITULO -->
+        <ion-card-title>
+          <h1>
+            <strong>
+            Bienvenido!
+            </strong>
+          </h1>
+        </ion-card-title>
+<!-- FIN TITULO -->
+
+      </ion-card-header>
+    </ion-row>
+
+<!-- NOMBRE USUARIO -->
+    <ion-label>
+      Usuario: 
+    </ion-label>
+
+<!-- INFORMACION ADICIONAL -->
+    <ion-row class="ion-justify-content-center">
+      <ion-card-header>
+        <ion-card-title>
+          <h2>
+            <strong>
+              Información Adicional
+            </strong>
+          </h2>
+        </ion-card-title>
+      </ion-card-header>
+    </ion-row>
+<!-- FIN INFORMACION ADICIONAL -->
+
+<!-- INICIO LISTA -->
+    <ion-list>
+
+<!-- NOMBRE INPUT-->
+      <ion-item>
+        <ion-input label="Nombre" labelPlacement="fixed" placeholder="Ingrese Nombre"></ion-input>
+      </ion-item>
+    <br>
+<!-- APELLIDO INPUT-->
+      <ion-item>
+        <ion-input label="Apellido" labelPlacement="fixed" placeholder="Ingrese Apellido"></ion-input>
+      </ion-item>
+    <br>
+<!-- NIVEL EDUCACION COMBOBOX -->
+      <ion-item>
+        <ion-select label="Nivel Educación" [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Seleccione Nivel">
+          <ion-select-option value="basica">Básica</ion-select-option>
+          <ion-select-option value="media">Media</ion-select-option>
+          <ion-select-option value="superior">Superior</ion-select-option>
+        </ion-select>
+      </ion-item>
+    <br>
+
+<!-- FECHA NACIMIENTO INPUT-->
+      <ion-item>
+        <ion-input label="Fecha Nacimiento" type="date"></ion-input>
+      </ion-item>
+    <br>
+
+    </ion-list>
+    <br>
+
+<!-- BOTONES LIMPIAR Y MOSTRAR-->
+    <ion-toolbar>
+      <ion-button slot="start">Limpiar</ion-button>
+
+      <ion-button (click)="presentAlert()" slot="end">Mostrar</ion-button>
+    </ion-toolbar>
+    <br>
+
+  </ion-card>
+<!-- FIN CARD-->
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title>App desarrollado por Apolo Ocampo ~ PGY4121-010V</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+
 </ion-content>
